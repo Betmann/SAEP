@@ -1,0 +1,218 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+  
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+  
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+  
+  
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue-65);
+  padding: 15px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 10rem; 
+  height: auto;
+  margin-right: 0; 
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.Link {
+  color: var(--branco);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.Link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--branco);
+  transform: scaleX(0);
+  transition: transform 0.25s ease-out;
+}
+
+.Link:hover::before {
+  transform: scaleX(1);
+}
+
+/* Estilos Cadastro de Usuários */
+
+.containerCadastro {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: var(--branco);
+}
+
+.containerCadastro h1 {
+  text-align: center;
+  color: var(--blue-40);
+  font-size: 1.7rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.formularioCadastro {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainerCasdatro {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainerCasdatro label {
+  font-weight: 600;
+  margin-bottom: 4px; /* Aumentado o espaçamento abaixo dos labels */
+}
+
+.inputContainerCasdatro input {
+  padding: 12px;
+  border: 1px solid var(--cinza-claro);
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.inputContainerCasdatro input:focus {
+  border-color: var(--blue-40);
+  outline: none;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; /* Ajustado o espaçamento superior do botão */
+}
+
+.submitButton {
+  padding: 16px;
+  border: none;
+  background-color: var(--blue-65);
+  color: var(--branco);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitButton:hover {
+  background-color: var(--blue-80);
+}
+
+.submitButton:active {
+  transform: scale(0.98);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .containerCadastro {
+    padding: 20px;
+  }
+
+  .containerCadastro h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .inputContainerCasdatro {
+    margin-bottom: 16px;
+  }
+
+  .inputContainerCasdatro input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submitButton {
+    font-size: 16px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerCadastro {
+    padding: 15px;
+  }
+
+  .containerCadastro h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .inputContainerCasdatro {
+    margin-bottom: 12px;
+  }
+
+  .inputContainerCasdatro input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .submitButton {
+    font-size: 14px;
+    height: 40px;
+  }
+}
+
+.containner {
+ background-color: var(--branco);
+}
